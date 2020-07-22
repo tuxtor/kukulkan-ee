@@ -3,7 +3,6 @@ package com.nabenik.kukulkan.controller;
 import com.nabenik.kukulkan.model.Phrase;
 import com.nabenik.kukulkan.repository.PhraseRepository;
 import javax.inject.Inject;
-import javax.transaction.Transactional;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;

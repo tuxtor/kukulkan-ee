@@ -5,9 +5,11 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 /**
+ * JAX-RS Base activator
  *
+ * @author tuxtor
  */
-@ApplicationPath("/data")
+@ApplicationPath("/rest")
 @ApplicationScoped
-public class KukulkaneeRestApplication extends Application {
+public class KukulkanRestApplication extends Application {
 }

@@ -5,7 +5,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 /**
+ * A simple JAX-RS endpoint useful for testing
  *
+ * @author tuxtor
  */
 @Path("/hello")
 @Singleton

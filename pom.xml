@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.nabenik</groupId>
   <artifactId>kukulkan-ee</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
     <maven.compiler.target>11</maven.compiler.target>
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <maven.compiler.source>11</maven.compiler.source>
-    <payaraVersion>5.2020.2</payaraVersion>
+    <payara.version>5.2020.2</payara.version>
     <final.name>kukulkan-ee</final.name>
     <slf4j.version>1.7.30</slf4j.version>
     <deltaspike.version>1.9.4</deltaspike.version>
@@ -26,7 +26,7 @@
     </dependency>
     <dependency>
       <groupId>jakarta.platform</groupId>
-      <artifactId>jakarta.jakartaee-api</artifactId>
+      <artifactId>jakarta.jakartaee-web-api</artifactId>
       <version>8.0.0</version>
       <scope>provided</scope>
     </dependency>
@@ -88,7 +88,7 @@
       <dependency>
           <groupId>fish.payara.extras</groupId>
           <artifactId>payara-embedded-web</artifactId>
-          <version>${payaraVersion}</version>
+          <version>${payara.version}</version>
           <scope>test</scope>
       </dependency>
   </dependencies>
@@ -173,7 +173,7 @@
     <profile>
       <id>payara-micro</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <build>
         <plugins>
@@ -190,7 +190,7 @@
               </execution>
             </executions>
             <configuration>
-              <payaraVersion>${payaraVersion}</payaraVersion>
+              <payaraVersion>${payara.version}</payaraVersion>
             </configuration>
           </plugin>
         </plugins>

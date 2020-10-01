@@ -1,23 +1,27 @@
-# MicroProfile generated Application
+# Kukulkan-EE
 
 ## Introduction
 
-MicroProfile Starter has generated this MicroProfile application for you.
+Kukulkan EE is an opinionated bootstrap project for JavaEE/JakartaEE 8.0 and Microprofile 3 family.
 
-The generation of the executable jar file can be performed by issuing the following command
+The principal motivator behind it is time. Despite being the foundation of Enterprise Java ecosystem, bootstrapping CDI projects is a time consuming and sometimes redundant task.
 
-    mvn clean package
+Hence Kukulkan EE was created with the following principles:
 
-This will create an executable jar file **kukulkan-ee-microbundle.jar** within the _target_ maven folder. This can be started by executing the following command
+* Provide a bootstrap project for traditional .war deployments, fat jars, just enough application server and docker
+*
+* Allow type-safe and fast repositories generation
+* 
 
-    java -jar target/kukulkan-ee-microbundle.jar
 
 
 
+## Why Kukulkan?
 
-To launch the test page, open your browser at the following URL
+In the Mayan mithology [Kukulkan](https://en.wikipedia.org/wiki/Kukulkan) is one of the deities that created (hence bootstrapped) the universe.
 
-    http://localhost:8080/index.html
+Also as an internal joke, this project maintained/useful project for a [Guatemalan company](https://www.nabenik.com/) and people in Guatemala tend  to overuse Mayan terms.
+
 
 ## Specification examples
 

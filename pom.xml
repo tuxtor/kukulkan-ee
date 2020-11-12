@@ -10,7 +10,7 @@
     <maven.compiler.target>11</maven.compiler.target>
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <maven.compiler.source>11</maven.compiler.source>
-    <payara.version>5.2020.2</payara.version>
+    <payara.version>5.2020.6</payara.version>
     <final.name>kukulkan-ee</final.name>
     <slf4j.version>1.7.30</slf4j.version>
     <deltaspike.version>1.9.4</deltaspike.version>

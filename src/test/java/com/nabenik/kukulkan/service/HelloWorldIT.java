@@ -30,7 +30,8 @@ public class HelloWorldIT {
 
     @Test
     public void helloTest() {
-        Assert.assertEquals("Hello Victor", helloService.doHello("Victor"));
-
+        var resultadoEsperado = "Hello Victor";
+        var resultadoObtenido = helloService.doHello("Victor");
+        Assert.assertEquals(resultadoEsperado, resultadoObtenido);
     }
 }

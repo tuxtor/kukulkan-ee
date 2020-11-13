@@ -179,7 +179,6 @@
                         <build>
                             <dockerFile>${project.basedir}/Dockerfile.jkube</dockerFile >
                         </build>
-
                     </image>
                 </images>
             </configuration>

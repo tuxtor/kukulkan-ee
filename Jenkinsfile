@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn clean verify'
+                sh 'mvn clean verify k8s:build k8s:push'
             }
         }
         stage('deployment') {

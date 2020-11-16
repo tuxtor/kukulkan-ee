@@ -22,7 +22,7 @@ public class HelloController {
     Logger logger;
 
     @Inject
-    @ConfigProperty(name = "name", defaultValue = "world")
+    @ConfigProperty(name = "name", defaultValue = "mundo version 2.0")
     String name;
 
     @Inject

@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn clean k8s:build k8s:push'
+                sh 'mvn clean package k8s:build k8s:push'
             }
         }
     }

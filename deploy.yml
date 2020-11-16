@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: kukulkan-svc
+    labels:
+        app: kukulkan-ee
+spec:
+    type: NodePort
+    ports:
+    - port: 8080
+      nodePort: 30020
+      protocol: TCP
+    selector:
+      app: kukulkan-ee
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: kukulkan-deployment
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: kukulkan-ee
+    minReadySeconds: 10
+    template:
+        metadata:
+            labels:
+                app: kukulkan-ee
+        spec:
+            containers:
+            - name: kukulkan-pod
+              image: tuxtor/kukulkan-ee:1.0.0-SNAPSHOT
+              ports:
+              - containerPort: 8080

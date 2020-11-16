@@ -6,5 +6,10 @@ pipeline {
                 sh 'mvn clean verify'
             }
         }
+        stage('deployment') {
+            steps {
+                sh 'kubectl apply -f deploy.yml'
+            }
+        }
     }
 }

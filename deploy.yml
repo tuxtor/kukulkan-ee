@@ -30,6 +30,6 @@ spec:
         spec:
             containers:
             - name: kukulkan-pod
-              image: tuxtor/kukulkan-ee:1.0.0-SNAPSHOT
+              image: tuxtor/kukulkan-ee:1.0.1-SNAPSHOT
               ports:
               - containerPort: 8080

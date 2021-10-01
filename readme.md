@@ -38,3 +38,7 @@ By default, Kukulkan includes the creation of a JAX-RS application class to defi
 Also, a simple Hello world endpoint is created, have a look **HelloController** class.
 
 More information on MicroProfile can be found [here](https://microprofile.io/)
+
+## Archetype
+
+You could generate a project similar to this using [Kukulkan EE Archetype](https://tuxtor.github.io/kukulkan-ee-archetype/)

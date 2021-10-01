@@ -10,18 +10,18 @@
     <maven.compiler.target>11</maven.compiler.target>
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <maven.compiler.source>11</maven.compiler.source>
-    <payara.version>5.2020.7</payara.version>
+    <payara.version>5.2021.7</payara.version>
     <final.name>kukulkan-ee</final.name>
-    <slf4j.version>1.7.30</slf4j.version>
+    <slf4j.version>1.7.32</slf4j.version>
     <deltaspike.version>1.9.4</deltaspike.version>
     <jboss.arquillian.version>1.6.0.Final</jboss.arquillian.version>
-    <jkube.version>1.0.2</jkube.version>
+    <jkube.version>1.4.0</jkube.version>
   </properties>
   <dependencies>
     <dependency>
       <groupId>org.eclipse.microprofile</groupId>
       <artifactId>microprofile</artifactId>
-      <version>3.3</version>
+      <version>4.0.1</version>
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
@@ -196,7 +196,7 @@
           <plugin>
             <groupId>fish.payara.maven.plugins</groupId>
             <artifactId>payara-micro-maven-plugin</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.5</version>
             <executions>
               <execution>
                 <phase>package</phase>
@@ -206,7 +206,8 @@
               </execution>
             </executions>
             <configuration>
-              <payaraVersion>${payara.version}</payaraVersion>
+                <payaraVersion>${payara.version}</payaraVersion>
+                <deployWar>true</deployWar>
             </configuration>
           </plugin>
         </plugins>

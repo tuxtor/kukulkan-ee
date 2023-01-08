@@ -2,15 +2,16 @@ package com.nabenik.kukulkan.service;
 
 import com.nabenik.kukulkan.util.TestUtil;
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import javax.inject.Inject;
 
-@RunWith(Arquillian.class)
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@ExtendWith(ArquillianExtension.class)
 public class HelloWorldIT {
 
     @Inject
@@ -32,6 +33,6 @@ public class HelloWorldIT {
     public void helloTest() {
         var resultadoEsperado = "Hello Victor";
         var resultadoObtenido = helloService.doHello("Victor");
-        Assert.assertEquals(resultadoEsperado, resultadoObtenido);
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 }

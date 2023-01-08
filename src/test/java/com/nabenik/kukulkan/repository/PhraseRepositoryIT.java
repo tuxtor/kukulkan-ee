@@ -3,15 +3,16 @@ package com.nabenik.kukulkan.repository;
 import com.nabenik.kukulkan.model.Phrase;
 import com.nabenik.kukulkan.util.TestUtil;
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import javax.inject.Inject;
 
-@RunWith(Arquillian.class)
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+@ExtendWith(ArquillianExtension.class)
 public class PhraseRepositoryIT {
 
     @Inject
@@ -36,7 +37,7 @@ public class PhraseRepositoryIT {
 
         phraseRepository.save(phrase);
 
-        Assert.assertNotNull(phrase.getPhraseId());
+        assertNotNull(phrase.getPhraseId());
     }
 
 }

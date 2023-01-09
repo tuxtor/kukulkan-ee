@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.nabenik</groupId>
   <artifactId>kukulkan-ee</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
     <maven.compiler.target>17</maven.compiler.target>
@@ -17,6 +17,7 @@
     <jboss.arquillian.version>1.7.0.Alpha13</jboss.arquillian.version>
     <jkube.version>1.10.1</jkube.version>
     <junit.version></junit.version>
+    <jkube.image.name>%g/%a:%l</jkube.image.name>
   </properties>
   <dependencies>
     <dependency>
@@ -188,8 +189,7 @@
             <configuration>
                 <images>
                     <image>
-                        <name>tuxtor/kukulkan-ee:${project.version}</name>
-                        <alias>tuxtor/kukulkan-ee</alias>
+                        <name>%g/%a:%l</name>
                         <build>
                             <dockerFile>${project.basedir}/Dockerfile.jkube</dockerFile >
                         </build>
@@ -210,7 +210,7 @@
           <plugin>
             <groupId>fish.payara.maven.plugins</groupId>
             <artifactId>payara-micro-maven-plugin</artifactId>
-            <version>1.0.5</version>
+            <version>1.4.0</version>
             <executions>
               <execution>
                 <phase>package</phase>

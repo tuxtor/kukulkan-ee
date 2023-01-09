@@ -16,7 +16,7 @@
     <deltaspike.version>1.9.6</deltaspike.version>
     <jboss.arquillian.version>1.7.0.Alpha13</jboss.arquillian.version>
     <jkube.version>1.10.1</jkube.version>
-    <junit.version></junit.version>
+    <junit.version>5.9.1</junit.version>
     <jkube.image.name>%g/%a:%l</jkube.image.name>
   </properties>
   <dependencies>
@@ -112,7 +112,7 @@
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
-                <version>5.9.1</version>
+                <version>${junit.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
